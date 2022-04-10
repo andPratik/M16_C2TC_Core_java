@@ -10,6 +10,7 @@ public class Example6string {
 		Scanner sc =new Scanner(System.in);
 		System.out.println("enter the string");
 		String string = sc.next();
+		System.out.println(string);
 		
 	}
 
