@@ -4,18 +4,23 @@ import java.util.Scanner;
 
 public class FibonacciSeries {
 	
-	  public static void main(String[] args) {
-		  Scanner sc =new Scanner(System.in);
-		    int n = sc.nextInt() , firstTerm = 0, secondTerm = 1;
-		    System.out.println("Fibonacci Series till " + n + " terms:");
-
-		    for (int i = 1; i <= n; ++i) {
-		      System.out.print(firstTerm + ", ");
-
-		      // compute the next term
-		      int nextTerm = firstTerm + secondTerm;
-		      firstTerm = secondTerm;
-		      secondTerm = nextTerm;
-		    }
-		  }
-		}
+	 static int a=0,b=1,c=0;    
+	 static void printFibonacci(int count){    
+	    if(count>0){    
+	       c = a + b;    
+	        a= b;    
+	         b= c;    
+	         System.out.print(" "+c);   
+	         printFibonacci(count-1);    
+	     }    
+	 }    
+	 public static void main(String args[])
+	 {
+		 Scanner sc=new Scanner(System.in);
+		 System.out.println("Enter The Nth term");
+		 int count=	 sc.nextInt();
+        System.out.print(a+" "+b);
+	  printFibonacci(count-2);
+	 }  
+	}  
+		
